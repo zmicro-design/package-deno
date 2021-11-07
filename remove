@@ -2,7 +2,7 @@
 
 help() {
   echo "Usage:"
-  echo "  zpackage install deno"
+  echo "  zpackage remove deno"
   echo ""
 }
 
@@ -12,11 +12,7 @@ core() {
     exit 0
   fi
   
-  local version=$1
-
-  deno::install $version
-
-  deno::version
+  deno::remove
 }
 
 run() {
